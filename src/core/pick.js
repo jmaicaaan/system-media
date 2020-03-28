@@ -1,3 +1,5 @@
+import { createMediaQuery } from '../utils/createMediaQuery';
+
 export const pick = breakpoints => value => {
   const defaultValue = Array.isArray(value) ? value[0] : value;
 
