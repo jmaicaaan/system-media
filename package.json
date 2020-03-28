@@ -1,0 +1,22 @@
+{
+  "name": "system-media",
+  "version": "1.0.0",
+  "description": "A React utility library to match your props to the given media query",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "rollup --config ./config/rollup.config.js"
+  },
+  "keywords": [
+    "react",
+    "media-query",
+    "matchMedia",
+    "media props",
+    "react props",
+  ],
+  "author": "JM Santos <johmichaelubas.santos@gmail.com.com",
+  "license": "ISC",
+  "devDependencies": {
+    "rollup": "^2.2.0"
+  }
+}
