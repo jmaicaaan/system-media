@@ -6,16 +6,13 @@ export default {
     file: 'build/index.js',
     // https://dev.to/iggredible/what-the-heck-are-cjs-amd-umd-and-esm-ikm
     format: 'umd',
-    name: 'bundle'
-  },
-  external: [
-    'react',
-    'react-proptypes'
-  ],
-  output: {
+    name: 'bundle',
     globals: {
       'react': 'React'
-    }
+    },
   },
+  external: [
+    'react'
+  ],
   plugins: [resolve()]
 };
