@@ -31,4 +31,4 @@ const system = breakpoints => value => {
 };
 
 const systemWithDefaults = system(Defaults.Breakpoints);
-export { systemWithDefaults as system };
+export { systemWithDefaults, system };
