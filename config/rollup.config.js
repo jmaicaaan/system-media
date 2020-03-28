@@ -8,5 +8,14 @@ export default {
     format: 'umd',
     name: 'bundle'
   },
+  external: [
+    'react',
+    'react-proptypes'
+  ],
+  output: {
+    globals: {
+      'react': 'React'
+    }
+  },
   plugins: [resolve()]
 };
