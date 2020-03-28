@@ -1,6 +1,6 @@
 {
   "name": "system-media",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "A React utility library to match your props to the given media query",
   "main": "build/index.js",
   "scripts": {
