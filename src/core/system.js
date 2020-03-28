@@ -11,7 +11,7 @@ const system = breakpoints => value => {
     throw new Error('Breakpoints should be an array of media');
   }
   const getInitialData = useCallback(() => {
-    return pick(breakpoints, value);
+    return pick(breakpoints)(value);
   }, [value]);
 
   const [data, setData] = useState(getInitialData(value));
@@ -22,7 +22,7 @@ const system = breakpoints => value => {
 
   useEffect(() => {
     const handleResize = () => {
-      const newData = pick(breakpoints, value);
+      const newData = pick(breakpoints)(value);
       setData(newData);
     };
 
