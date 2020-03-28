@@ -26,5 +26,8 @@
   "devDependencies": {
     "rimraf": "^3.0.2",
     "rollup": "^2.2.0"
+  },
+  "dependencies": {
+    "react": "^16.13.1"
   }
 }
