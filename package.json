@@ -1,10 +1,11 @@
 {
   "name": "system-media",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "A React utility library to match your props to the given media query",
   "main": "build/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 0",
+    "prebuild": "rimraf build",
     "build": "rollup --config ./config/rollup.config.js"
   },
   "files": [
@@ -23,6 +24,7 @@
   "author": "JM Santos <johmichaelubas.santos@gmail.com.com",
   "license": "ISC",
   "devDependencies": {
+    "rimraf": "^3.0.2",
     "rollup": "^2.2.0"
   }
 }
