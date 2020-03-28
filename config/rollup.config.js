@@ -1,3 +1,5 @@
+import resolve from '@rollup/plugin-node-resolve';
+
 export default {
   input: 'src/index.js',
   output: {
@@ -5,5 +7,6 @@ export default {
     // https://dev.to/iggredible/what-the-heck-are-cjs-amd-umd-and-esm-ikm
     format: 'umd',
     name: 'bundle'
-  }
+  },
+  plugins: [resolve()]
 };

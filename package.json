@@ -25,6 +25,7 @@
   "author": "JM Santos <johmichaelubas.santos@gmail.com.com",
   "license": "ISC",
   "devDependencies": {
+    "@rollup/plugin-node-resolve": "^7.1.1",
     "rimraf": "^3.0.2",
     "rollup": "^2.2.0"
   },
