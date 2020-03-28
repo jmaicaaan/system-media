@@ -11,8 +11,7 @@
     "build"
   ],
   "publishConfig": {
-    "access": "public",
-    "registry": "https://npm.pkg.github.com/"
+    "access": "public"
   },
   "keywords": [
     "react",
