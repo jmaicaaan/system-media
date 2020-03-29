@@ -1,5 +1,5 @@
 # Welcome to system-media 👋
-![Version](https://img.shields.io/badge/version-1.0.0-blue.svg?cacheSeconds=2592000)
+[![npm version](https://badge.fury.io/js/system-media.svg)](https://badge.fury.io/js/system-media)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](#)
 
 > A React utility library to match your props to the given media query
