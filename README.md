@@ -19,20 +19,20 @@ npm install system-media
 https://codesandbox.io/s/crazy-zhukovsky-u18zw
 
 ```jsx
-import React from "react";
+import React from 'react';
 
 import { system } from 'system-media';
 
 const theme = {
   // Default breakpoints used by styled-system
-  breakpoints: ["40em", "52em", "64em"]
+  breakpoints: ['40em', '52em', '64em']
 };
 
 const Text = ({ value }) => (
   <p
     style={{
-      fontFamily: "comic-sans",
-      fontSize: "16px"
+      fontFamily: 'comic-sans',
+      fontSize: '16px'
     }}
   >
     {system(theme.breakpoints)(value)}
@@ -41,8 +41,8 @@ const Text = ({ value }) => (
 
 
 export default function App() {
-  const user = "Dan Abramov";
-  const userDisplayNameMobile = user.split(" ")[0];
+  const user = 'Dan Abramov';
+  const userDisplayNameMobile = user.split(' ')[0];
   const userDisplayNameDesktop = user;
   return (
     <div className="App">
