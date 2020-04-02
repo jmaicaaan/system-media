@@ -50,7 +50,7 @@ export default function App() {
         value={[
           `Hi ${userDisplayNameMobile}`, 
           `Hi ${userDisplayNameDesktop}`
-		]}
+        ]}
       />
     </div>
   );
