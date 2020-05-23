@@ -1,4 +1,5 @@
 # Welcome to system-media 👋
+
 [![npm version](https://badge.fury.io/js/system-media.svg)](https://badge.fury.io/js/system-media)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](#)
 
@@ -25,20 +26,19 @@ import { system } from 'system-media';
 
 const theme = {
   // Default breakpoints used by styled-system
-  breakpoints: ['40em', '52em', '64em']
+  breakpoints: ['40em', '52em', '64em'],
 };
 
 const Text = ({ value }) => (
   <p
     style={{
       fontFamily: 'comic-sans',
-      fontSize: '16px'
+      fontSize: '16px',
     }}
   >
     {system(theme.breakpoints)(value)}
   </p>
 );
-
 
 export default function App() {
   const user = 'Dan Abramov';
@@ -47,10 +47,7 @@ export default function App() {
   return (
     <div className="App">
       <Text
-        value={[
-          `Hi ${userDisplayNameMobile}`, 
-          `Hi ${userDisplayNameDesktop}`
-        ]}
+        value={[`Hi ${userDisplayNameMobile}`, `Hi ${userDisplayNameDesktop}`]}
       />
     </div>
   );
@@ -59,16 +56,16 @@ export default function App() {
 
 ## Author
 
-👤 **JM Santos <johmichaelubas.santos@gmail.com.com**
+👤 **JM Santos <johmichaelubas.santos@gmail.com>**
 
-* Website: https://github.com/jmaicaaan
-* Github: [@jmaicaaan](https://github.com/jmaicaaan)
+- Website: https://github.com/jmaicaaan
+- Github: [@jmaicaaan](https://github.com/jmaicaaan)
 
 ## 🤝 Contributing
 
 Contributions, issues and feature requests are welcome!
 
-Feel free to check [issues page](https://github.com/jmaicaaan/system-media/issues). 
+Feel free to check [issues page](https://github.com/jmaicaaan/system-media/issues).
 
 ## Show your support
 
