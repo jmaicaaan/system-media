@@ -1,25 +1,41 @@
 import { createMediaQuery } from '../utils/createMediaQuery';
 
-export const pick = breakpoints => value => {
+import { Breakpoint, Breakpoints } from '../types';
+
+export const pick = (breakpoints: Breakpoints) => (value: any) => {
   const defaultValue = Array.isArray(value) ? value[0] : value;
 
-  const mapToBreakpointBaseStructure = (breakpoint, index) => ({
+  const mapToBreakpointBaseStructure = (
+    breakpoint: Breakpoint,
+    index: number
+  ) => ({
     breakpoint,
-    index
+    index,
   });
 
-  const mapWithMatchMedia = ({ breakpoint, index }) => {
+  const mapWithMatchMedia = ({
+    breakpoint,
+    index,
+  }: {
+    breakpoint: Breakpoint;
+    index: number;
+  }) => {
     const mediaQuery = createMediaQuery(breakpoint);
     const { media, matches } = window.matchMedia(mediaQuery);
     return {
       breakpoint,
       index,
       media,
-      matches
+      matches,
     };
   };
 
-  const pickOnlyMatchingQueries = ({ matches }) => matches;
+  const pickOnlyMatchingQueries = ({
+    matches,
+  }: Pick<MediaQueryList, 'media' | 'matches'> & {
+    breakpoint: Breakpoint;
+    index: number;
+  }): boolean => matches;
 
   const mediaQueryResult = [...breakpoints]
     .map(mapToBreakpointBaseStructure)
@@ -39,6 +55,9 @@ export const pick = breakpoints => value => {
   // until we fallback to default value
 
   if (Array.isArray(value)) {
+    if (!lastMatchedQuery) {
+      return value.slice(0).pop();
+    }
     return (
       // Added + 1 to skip picking the "base" value which is the first item in the array
       value[lastMatchedQuery.index + 1] ||
